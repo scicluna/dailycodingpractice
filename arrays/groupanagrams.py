@@ -5,10 +5,11 @@
 # if annagram... hashmap[annagram].append(string)
 from collections import defaultdict
 
-
 def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
     strmap = defaultdict(list)
     for string in strs:
         sorted_string = ''.join(sorted(string))
         strmap[sorted_string].append(string)
     return list(strmap.values())
+
+
